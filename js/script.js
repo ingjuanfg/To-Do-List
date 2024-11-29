@@ -339,8 +339,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function getUserPreferences() {
         const storedPreferences = localStorage.getItem("userPreferences");
         const defaultPreferences = {
-            name: "John Doe",
-            email: "john@gmail.com",
+            name: "Prueba usuario",
+            email: "prueba@gmail.com",
         };
 
         return storedPreferences
