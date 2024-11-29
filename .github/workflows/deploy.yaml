@@ -1,0 +1,18 @@
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches:
+      - main # Solo ejecuta la acción al hacer push en main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Chequea el código del repositorio
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      # 5. Despliega en GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: . # Carpeta con los archivos estáticos; ajusta según tu proyecto
