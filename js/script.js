@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (taskDescription.trim() === "" || dueDate === "") {
             swal({
                 title: "Error",
-                text: "Please enter both task and due date!",
+                text: "Por favor ingresa ambos, tarea y plazo límite!",
                 icon: "error",
             });
         } else {
